@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Presentación de Sebastian Garcia</title>
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" href="imagenes/buscar.png">
 </head>
 <body>
-    <h1>Proyecto M1</h1>
+    <header>
+        <h1>Sebastian Garcia</h1>
+        <h2>Mi pagina Web</h2>
+    </header>
+    <main>
+        <section class="Efecto-zoom">
+            <h2>¿Quien Soy?
+            </h2>
+            <p>Soy Sebastian Garcia, soy estudiante de programación. Tengo 23 años y soy administrador de empresas y productor musical. Vivo en Colombia, en la ciudad de Santa Marta. Me gusta mucho la tecnología, hacer deporte y la música.</p>            
+        </section>
+        <section class="Efecto-zoom">
+            <h2>Mis tecnologías favoritas</h2>
+             <img src="imagenes/htmllogo.png" alt="html">
+             <img src="imagenes/kotlinlogo.png" alt="kotlin">
+             <img src="imagenes/mysql.png" alt="sql">
+        </section>
+        <section class="Efecto-zoom">
+            <h2>Mis actividades favoritas</h2>
+            <div id="formulario">
+                <form>
+                    <input type="text" id="nombreActividad" name="nombreActividad" placeholder="Nombre de la actividad">
+                    <input type="text" id="descripcionActividad" name="descripcionActividad" placeholder="Descripción de la actividad">
+                    <input type="url" id="linkImagen" name="linkImagen" placeholder="Link de la imagen">
+                    <button type="submit">Agregar actividad</button>
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
