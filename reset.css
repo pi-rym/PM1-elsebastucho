@@ -1,0 +1,39 @@
+/* reset.css */
+/* ---------------------------------------------- */
+
+/* Box sizing rules */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Reset margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, figure, hr {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul {
+    list-style: none;
+}
+
+/* Remove default font */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Remove default font sizes */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+}
+
+/* Reset links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Add custom styles below */
