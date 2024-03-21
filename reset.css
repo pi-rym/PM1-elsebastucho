@@ -1,39 +1,66 @@
 /* reset.css */
-/* ---------------------------------------------- */
 
-/* Box sizing rules */
-html {
+/* Establecer el box-sizing en border-box para todos los elementos */
+*, *::before, *::after {
     box-sizing: border-box;
 }
-*, *::before, *::after {
-    box-sizing: inherit;
-}
 
-/* Reset margin and padding */
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, figure, hr {
+/* Establecer el margin y padding a 0 para todos los elementos */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
     margin: 0;
     padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-/* Remove list styles (bullets/numbers) */
+/* Reestablecer estilos para los elementos que podrían tener estilos heredados */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Reestablecer estilos para los elementos <input>, <button> y <select> */
+input, button, select {
+    font: inherit;
+    margin: 0;
+}
+
+/* Reestablecer estilos para las listas */
 ol, ul {
     list-style: none;
 }
 
-/* Remove default font */
-body {
-    font-family: Arial, sans-serif;
+/* Reestablecer estilos para el texto preformateado */
+pre {
+    white-space: pre-wrap;
 }
 
-/* Remove default font sizes */
-h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
+/* Reestablecer estilos para los elementos <blockquote> */
+blockquote {
+    quotes: none;
 }
 
-/* Reset links */
-a {
-    text-decoration: none;
-    color: inherit;
+/* Reestablecer estilos para los elementos <q> */
+q {
+    quotes: none;
 }
 
-/* Add custom styles below */
+/* Reestablecer estilos para los elementos <table> */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

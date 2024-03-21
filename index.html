@@ -1,42 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!--HOMEWORK #1 FINISHED!!!!-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentación de Sebastian Garcia</title>
-    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="reset.css"/>
     <link rel="stylesheet" href="styles.css"/>
     <link rel="icon" href="imagenes/buscar.png">
 </head>
 <body>
     <header>
-        <h1>Sebastian Garcia</h1>
-        <h2>Mi pagina Web</h2>
+        <h1>Mi Página de Presentación</h1>
     </header>
-    <main>
-        <section class="Efecto-zoom">
-            <h2>¿Quien Soy?
-            </h2>
-            <p>Soy Sebastian Garcia, soy estudiante de programación. Tengo 23 años y soy administrador de empresas y productor musical. Vivo en Colombia, en la ciudad de Santa Marta. Me gusta mucho la tecnología, hacer deporte y la música.</p>            
-        </section>
-        <section class="Efecto-zoom">
-            <h2>Mis tecnologías favoritas</h2>
-             <img src="imagenes/htmllogo.png" alt="html">
-             <img src="imagenes/kotlinlogo.png" alt="kotlin">
-             <img src="imagenes/mysql.png" alt="sql">
-        </section>
-        <section class="Efecto-zoom">
-            <h2>Mis actividades favoritas</h2>
-            <div id="formulario">
-                <form>
-                    <input type="text" id="nombreActividad" name="nombreActividad" placeholder="Nombre de la actividad">
-                    <input type="text" id="descripcionActividad" name="descripcionActividad" placeholder="Descripción de la actividad">
-                    <input type="url" id="linkImagen" name="linkImagen" placeholder="Link de la imagen">
-                    <button type="submit">Agregar actividad</button>
-                </form>
+
+    <section id="sobre-mi">
+        <h1 class="titulo">Sobre Mí</h1>
+        <p class="container">Soy Sebastian, vivo en la ciudad de santa marta-Colombia, Soy administrador de empresas y productor musical
+            soy estudiante de "soy henry" del curso fullStack. Me gusta cantar, hacer musica e interesado en progresar cada dia
+        </p>
+    </section>
+
+    <section id="mis-tecnologias">
+        <h2 class="titulo">Mis Tecnologías Favoritas</h2>
+        <div class="tecnologias-container">
+            <div class="tecnologia-card">
+                <img src="imagenes/htmllogo.png" alt="HTML" class="imagen-fija">
+                <p>HTML</p>
             </div>
-        </section>
-    </main>
-    <script src="scripts/index.js"></script>
+            <div class="tecnologia-card">
+                <img src="imagenes/kotlinlogo.png" alt="KOTLIN" class="imagen-fija">
+                <p>KOTLIN</p>
+            </div>
+            <div class="tecnologia-card">
+                <img src="imagenes/mysql.png" alt="MYSQL" class="imagen-fija">
+                <p>MYSQL</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <section id="mis-actividades">
+        <h2 class="titulo">Mis Actividades Favoritas</h2>
+        <div class="formulario">
+            <!-- Formulario para ingresar nuevas actividades -->
+            <div class="input-card">
+                <input type="text" id="titulo" placeholder="Título" class="input">
+                <input type="text" id="descripcion" placeholder="Descripción" class="input">
+                <input type="url" id="url-imagen" placeholder="URL de la imagen" class="input">
+                <button onclick="agregarActividad()" id="boton-agregar" class="boton">Agregar Actividad</button>
+            </div>
+        </div>
+        <div class="actividades"></div>
+    </section>
+    <div class="modal" id="cargandoModal">
+        <div class="modal-content">
+            <p>Cargando.</p>
+            <div class="spinner"></div> <!-- Agregar spinner para la animación de carga (opcional de mi parte)-->
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2024 - Pagina del Sebastucho</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/scripts/index.js"></script>
 </body>
 </html>

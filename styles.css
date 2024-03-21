@@ -1,89 +1,251 @@
+/* styles.css */
+
 body {
-    background-color: #ffffff; /* Fondo gris */
-    background-image: url('imagenes/imagen12.png'); /* Ruta a la imagen de fondo */
-    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra toda la página */
-    background-position: center; /* Centra la imagen */
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/imagenes/imagen12.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
+    background-position: center; /* Centrar la imagen en el fondo */
+    background-repeat: no-repeat; /* Evitar la repetición de la imagen */
+    background-attachment: fixed;
+    color: #ddd;
+    text-align: center; 
+    
 }
 
 header {
-    background-color: #41414179;
-    color: white;
+    background-color: rgba(77, 77, 77, 0.582);
+    color: #fff;
     text-align: center;
     padding: 20px 0;
-}
-
-main {
-    padding: 20px;
+    
 }
 
 section {
+    padding: 20px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-input, button {
+h2 {
     margin-bottom: 10px;
-    display: block;
-    width: 100%;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tecnologia {
+    margin: 10px;
+}
+
+.tecnologia img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.formulario {
+    margin-bottom: 20px;
+    
+}
+
+.actividad {
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 10px;
-    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.actividad h3 {
+    margin-bottom: 5px;
+}
+
+.actividad img {
+    max-width: 100%;
+    height: auto;
+}
+.imagen-fija {
+    width: 165px; /* Ancho deseado */
+    height: 165px; /* Alto deseado */
+    margin-right: 20px; /* Espacio a la derecha de cada imagen */
+    margin-left: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Transición suave para el efecto de zoom */
+    filter: grayscale(100%); /* Convertir la imagen a escala de grises */
+   
+    
+}
+.imagen-fija:hover {
+    transform: scale(1.1); /* Escala la imagen al 120% de su tamaño original */
+    filter: grayscale(0%); /* Eliminar la escala de grises */
+}
+
+
+.container {
+        border: 1px solid #ccc; /* Añade un borde alrededor de cada párrafo */
+        padding: 5px; /* Añade espacio alrededor del texto dentro de cada párrafo */
+        margin: 10px 10px; /* Añade espacio entre los párrafos */
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      
+
+}
+    
+.titulo {
+    font-size: 25px; /* Tamaño del texto */
+    text-shadow: 0 0 5px #4741d7, 0 0 10px rg#4741d7;/* Sombras de color neon */
+    transition: color 0.5s ease, text-shadow 0.5s ease; /* Transición para el color del texto y la sombra */
+    
+}
+
+.titulo:hover {
+    color: #4741d7; /* Cambiar el color al pasar el cursor */
+    text-shadow: 0 0 15px #4741d7, 0 0 20px #4741d7; /* Cambiar la sombra al pasar el cursor */
+}
+
+.input {
+    background-color:transparent;
     border-radius: 10px;
+    width: 20%;
+    height: 50px;
+    color: #ccc;
+    
 }
 
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
+.boton {
+    background:transparent; /* color de fondo */
+    color: #ffffff; /* color de fuente */
+    border: 2px solid #4741d7; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 10px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .boton:hover {
+    color: #fff;/* color de fuente hover */
+  }
+  .boton::after {
+    content: "";
+    background: #4741d7; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.3s ease;
+  }
+  .boton:hover::after {
+    transition: all 0.3s ease-out;
+    transform: skewX(-45deg) scale(1, 1);
+  }
+
+
+  #mis-tecnologias {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
 }
 
-button:hover {
-    background-color: #555;
+.tecnologias-container {
+    display: flex;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
 }
 
-#formulario {
-    max-width: 400px;
+.tecnologias-container div {
+    display: inline-block;
+    text-align: center; /* Alinea el texto al centro */
+    margin-right: 20px; /* Ajusta el espaciado entre las imágenes */
+}
+
+.tecnologia-card {
+    background-color: rgba(77, 77, 77, 0.486); /* Color blanco con opacidad */
+    padding: 20px; /* Ajusta el espacio alrededor del contenido */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    margin-right: 20px; /* Ajusta el espaciado entre las tarjetas */
+}
+
+.tecnologias-container {
+    display: flex;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+}
+
+.tecnologias-container div {
+    margin-right: 50px; /* Ajusta el espaciado entre las tarjetas */
+}
+
+.input-card {
+    background-color: rgba(77, 77, 77, 0.486); /* Color blanco con opacidad */
+    padding: 15px; /* Ajusta el espacio alrededor del contenido */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    margin-bottom: 20px; /* Ajusta el espaciado entre los campos de entrada */
+    display: flex;
+    flex-direction: column; /* Muestra los elementos en columna */
+}
+
+.formulario div {
+    margin-bottom: 20px; /* Ajusta el espaciado entre los elementos del formulario */
+}
+
+.input-card input,
+.input-card button {
+    width: 100%;
+    flex: 40px; /* Distribuye el espacio disponible igualmente entre los elementos */
+    margin-bottom: 10px; /* Ajusta el espaciado entre los elementos */
+}
+
+.input-card button {
+    width: 20%; /* Define el ancho del botón como la mitad del ancho de los inputs */
     margin: 0 auto;
+    margin-bottom: 5px; /* Ajusta el espaciado entre los elementos */
 }
 
-.Efecto-zoom {
-    color: white;
+
+
+.modal {
+    display: none; /* Oculta la ventana modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: rgba(77, 77, 77, 0.486);
     padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3s;
 }
 
-.Efecto-zoom:hover {
-    transform: scale(1.05); /* Escalamos ligeramente al pasar el mouse */
-}
-.Efecto-zoom > * {
-        transform: none; /* Elimina el efecto de zoom para todos los hijos directos de .Efecto-zoom */
-}
-
-p {
-    color: #f0f0f0;
-    text-align: justify;
-    max-width: 600px; /* Establece el ancho máximo del texto */
-    margin: 0 auto; /* Centra el texto horizontalmente */
-    margin-top: -10px;
-    background-color: rgba(8, 8, 8, 0.486); /* Establece un color de fondo blanco con una opacidad del 50% */
-    padding: 10px; /* Agrega espacio alrededor del texto */
-    border-radius: 20px;
-}
-.Efecto-zoom img {
-    height: 150px; /* Establece la altura deseada para las imágenes */
-    width: auto; /* Mantiene la proporción de la imagen */
-    transition: transform 0.3s; /* Agrega una transición suave al efecto de zoom */
-    margin: 30px;
-    filter: grayscale(100%);
+/* Define la animación de rotación para el spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-.Efecto-zoom img:hover {
-    transform: scale(1.4);
-    filter: grayscale(0%); /* Escala la imagen al pasar el mouse sobre ella */
+/* Estilo del spinner */
+.spinner {
+    border: 4px solid rgb(255, 255, 255);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* Aplica la animación de rotación */
+    margin: 0 auto; /* Centra el spinner horizontalmente */
 }
-
-
-
-
